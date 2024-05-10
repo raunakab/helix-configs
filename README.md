@@ -1,2 +1,2 @@
 # Helix configs
-My configurations for [helix](https://helix-editor.com).
+My configurations for the [helix](https://helix-editor.com) editor.
