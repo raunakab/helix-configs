@@ -1,0 +1,24 @@
+inherits = "github_dark_high_contrast"
+
+"comment" = "lime-green"
+
+# cursor
+"ui.cursor.primary.select" = { bg = "candy-red" }
+
+# selection
+"ui.selection.primary" = { bg = "stone" }
+
+# misc
+"ui.highlight" = { bg = "stone" }
+"ui.text.focus" = { bg = "stone" }
+
+# diagnostics
+"diagnostic.hint" = { modifiers = ["dim"] }
+"diagnostic.info" = { modifiers = ["dim"] }
+"diagnostic.warning" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim"] }
+
+[palette]
+lime-green = "#9ff28f"
+stone = "#556677"
+candy-red = "#ff55555"

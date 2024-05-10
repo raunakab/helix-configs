@@ -1,0 +1,87 @@
+theme = "ronnie-gruvbox"
+
+[editor]
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+bufferline = "always"
+color-modes = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "spacer",
+  "workspace-diagnostics",
+  "spacer",
+  "spinner",
+]
+center = [
+  "diagnostics",
+  "file-modification-indicator",
+]
+right = [
+  "position",
+  "position-percentage",
+  "total-line-numbers",
+  "spacer",
+  "separator",
+  "primary-selection-length",
+  "selections",
+  "separator",
+  "file-type",
+  "file-line-ending",
+]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+git-exclude = false
+
+[editor.whitespace.render]
+newline = "all"
+
+# Custom remappings
+
+[keys.normal]
+o = ["open_below", "normal_mode"]
+O = ["open_above", "normal_mode"]
+C-c = "no_op" # custom
+
+[keys.select]
+o = ["open_below", "normal_mode"]
+O = ["open_above", "normal_mode"]
+C-c = "no_op" # custom
+
+[keys.normal.g]
+h = "goto_first_nonwhitespace"
+s = "goto_line_start"
+"[" = "goto_file_start"
+"]" = "goto_file_end"
+g = "no_op"
+n = "no_op"
+p = "no_op"
+
+[keys.select.g]
+h = "goto_first_nonwhitespace"
+s = "goto_line_start"
+"[" = "goto_file_start"
+"]" = "goto_file_end"
+
+[keys.normal.space.j]
+j = "jumplist_picker" # custom
+h = "jump_backward" # custom
+l = "jump_forward" # custom
+
+[keys.normal.space.v]
+f = ":sh zellij run -c --cwd $PWD -d right --name filetree -- /home/rbhagat/.cargo/bin/broot" # custom
+t = ":sh zellij run --cwd $PWD --direction down --name terminal -- /home/linuxbrew/.linuxbrew/bin/fish" # custom
+d = ":sh zellij run --direction right --name gitdiff -- git diff" # custom

@@ -1,0 +1,147 @@
+# Rust
+# ==============================================================================
+[[language]]
+name = "rust"
+auto-format = false
+# ==============================================================================
+
+
+# Go
+# ==============================================================================
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[[language]]
+name = "go"
+auto-format = false
+language-servers = ["gopls"]
+# ==============================================================================
+
+
+# Python
+# ==============================================================================
+[language-server.pylsp]
+command = "pylsp"
+
+[[language]]
+name = "python"
+auto-format = false
+language-servers = ["pylsp"]
+file-types = ["py"]
+# ==============================================================================
+
+
+# Starlark
+# ==============================================================================
+[language-server.buck2-lsp]
+command = "buck2"
+args = ["lsp"]
+
+[[language]]
+name = "starlark"
+auto-format = false
+file-types = ["BUCK", "bzl"]
+language-servers = ["buck2-lsp"]
+# ==============================================================================
+
+
+# JSON
+# ==============================================================================
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true, json = { validate = { enable = true } } }
+
+[[language]]
+name = "json"
+auto-format = false
+language-servers = ["vscode-json-language-server"]
+file-types = [
+  "json",
+  "jsonc",
+  "arb",
+  "ipynb",
+  "geojson",
+  "gltf",
+  "webmanifest",
+  "flake.lock",
+  ".babelrc",
+  ".bowerrc",
+  ".jscrc",
+  "js.map",
+  "ts.map",
+  "css.map",
+  ".jslintrc",
+  "jsonld",
+  ".vuerc",
+  "composer.lock",
+  ".watchmanconfig",
+]
+# ==============================================================================
+
+
+# TOML
+# ==============================================================================
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+config = {}
+
+[[language]]
+name = "toml"
+auto-format = false
+language-servers = ["taplo"]
+file-types = ["toml", "poetry.lock", "Cargo.lock"]
+comment-token = "#"
+# ==============================================================================
+
+
+# YAML
+# ==============================================================================
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "yaml"
+auto-format = false
+language-servers = ["yaml-language-server"]
+file-types = ["yml", "yaml"]
+comment-token = "#"
+# ==============================================================================
+
+
+# HTML
+# ==============================================================================
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true }
+
+[[language]]
+name = "html"
+auto-format = false
+language-servers = ["vscode-html-language-server"]
+# ==============================================================================
+
+# Ini
+# ==============================================================================
+[[language]]
+name = "ini"
+scope = "source.ini"
+file-types = ["ini", ".buckconfig"]
+comment-token = "#"
+indent = { tab-width = 4, unit = "\t" }
+
+[[grammar]]
+name = "ini"
+source = { git = "https://github.com/justinmk/tree-sitter-ini", rev = "4d247fb876b4ae6b347687de4a179511bf67fcbc" }
+# ==============================================================================

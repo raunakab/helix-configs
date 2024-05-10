@@ -1,0 +1,18 @@
+inherits = "ayu_mirage"
+
+comment = "custom-green"
+
+"ui.selection.primary" = { bg = "custom-red" }
+"ui.cursor.primary.select" = { bg = "custom-blue" }
+"ui.virtual.whitespace" = { fg = "custom-dark-blue" }
+"ui.virtual.inlay-hint" = { bg = "cyan" }
+"diagnostic.hint" = { modifiers = ["dim"] }
+"diagnostic.info" = { modifiers = ["dim"] }
+"diagnostic.warning" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim"] }
+
+[palette]
+custom-red = "#bd5d51"
+custom-blue = "#00b0e6"
+custom-dark-blue = "#636e8f"
+custom-green = "#9ff28f"
