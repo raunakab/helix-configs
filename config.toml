@@ -80,8 +80,3 @@ s = "goto_line_start"
 j = "jumplist_picker" # custom
 h = "jump_backward" # custom
 l = "jump_forward" # custom
-
-[keys.normal.space.v]
-f = ":sh zellij run -c --cwd $PWD -d right --name filetree -- /home/rbhagat/.cargo/bin/broot" # custom
-t = ":sh zellij run --cwd $PWD --direction down --name terminal -- /home/linuxbrew/.linuxbrew/bin/fish" # custom
-d = ":sh zellij run --direction right --name gitdiff -- git diff" # custom

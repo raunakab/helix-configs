@@ -14,9 +14,9 @@ args = ["lsp"]
 
 [[language]]
 name = "gleam"
-file-types = ["gleam"]
-roots = ["gleam.toml"]
+auto-format = false
 language-servers = ["gleam"]
+# roots = ["gleam.toml"]
 # ==============================================================================
 
 
