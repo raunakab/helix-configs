@@ -1,0 +1,40 @@
+inherits = "acme"
+
+# background
+"ui.background" = { bg = "stone0" }
+"ui.linenr" = { bg = "stone0" }
+"ui.linenr.selected" = { bg = "stone1" }
+
+# cursor + selections
+"ui.cursor.primary.normal" = { bg = "stone3" }
+"ui.cursor.primary.select" = { bg = "red0" }
+"ui.cursorcolumn" = { bg = "stone1" }
+"ui.cursorline" = { bg = "stone1" }
+"ui.selection" = { bg = "blue0" }
+
+# text
+"comment" = { fg = "lime-green" }
+"ui.text" = { fg = "stone2" }
+
+# misc
+"ui.highlight" = { bg = "candy-red" }
+"ui.text.focus" = { bg = "candy-red" }
+
+# diagnostics
+"diagnostic.hint" = { modifiers = ["dim"] }
+"diagnostic.info" = { modifiers = ["dim"] }
+"diagnostic.warning" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim"] }
+
+[palette]
+lime-green = "#9ff28f"
+candy-red = "#ff55555"
+sky-blue = "#5577ff"
+
+stone0 = "#222233"
+stone1 = "#444455"
+stone2 = "#888899"
+stone3 = "#ddddee"
+
+red0 = "#ff55555"
+blue0 = "#5577ff"
