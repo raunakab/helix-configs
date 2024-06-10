@@ -72,7 +72,6 @@ language-servers = ["buck2-lsp"]
 [language-server.vscode-json-language-server]
 command = "vscode-json-language-server"
 args = ["--stdio"]
-config = { provideFormatter = true, json = { validate = { enable = true } } }
 
 [[language]]
 name = "json"
@@ -99,6 +98,7 @@ file-types = [
   "composer.lock",
   ".watchmanconfig",
 ]
+formatter = { command = "prettier", args = ["--parser", "json"] }
 # ==============================================================================
 
 
@@ -128,8 +128,7 @@ args = ["--stdio"]
 name = "yaml"
 auto-format = false
 language-servers = ["yaml-language-server"]
-file-types = ["yml", "yaml"]
-comment-token = "#"
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
 # ==============================================================================
 
 
@@ -145,6 +144,7 @@ name = "html"
 auto-format = false
 language-servers = ["vscode-html-language-server"]
 # ==============================================================================
+
 
 # Ini
 # ==============================================================================
