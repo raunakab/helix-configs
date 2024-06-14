@@ -16,7 +16,6 @@ args = ["lsp"]
 name = "gleam"
 auto-format = false
 language-servers = ["gleam"]
-# roots = ["gleam.toml"]
 # ==============================================================================
 
 
@@ -62,7 +61,7 @@ args = ["lsp"]
 [[language]]
 name = "starlark"
 auto-format = false
-file-types = ["BUCK", "bzl"]
+file-types = ["bzl", { glob = "BUCK" }]
 language-servers = ["buck2-lsp"]
 # ==============================================================================
 
