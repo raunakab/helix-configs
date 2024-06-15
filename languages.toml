@@ -12,11 +12,9 @@ auto-format = false
 command = "clangd"
 
 [[language]]
-name = "C"
+name = "c"
 auto-format = false
 language-servers = ["clangd"]
-scope = "source.c"
-file-types = ["c"]
 # ==============================================================================
 
 
