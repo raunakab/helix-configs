@@ -172,7 +172,7 @@ auto-format = false
 [[language]]
 name = "ini"
 scope = "source.ini"
-file-types = ["ini", ".buckconfig"]
+file-types = ["ini", { glob = ".buckconfig" }]
 comment-token = "#"
 indent = { tab-width = 4, unit = "\t" }
 
