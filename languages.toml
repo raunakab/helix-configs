@@ -53,14 +53,18 @@ language-servers = ["gopls"]
 
 # Python
 # ==============================================================================
-[language-server.pylsp]
-command = "pylsp"
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff-lsp"
 
 [[language]]
 name = "python"
 auto-format = false
-language-servers = ["pylsp"]
-file-types = ["py"]
+language-servers = ["pyright", "ruff"]
+roots = [".", "pyproject.toml", "pyrightconfig.json", "requirements.txt"]
 # ==============================================================================
 
 
